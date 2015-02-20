@@ -1,0 +1,120 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'compass', '-g' ]
+2 info using npm@2.5.1
+3 info using node@v0.10.25
+4 verbose node symlink /usr/bin/node
+5 silly cache add args [ 'compass', null ]
+6 verbose cache add spec compass
+7 silly cache add parsed spec { raw: 'compass',
+7 silly cache add   scope: null,
+7 silly cache add   name: 'compass',
+7 silly cache add   rawSpec: '',
+7 silly cache add   spec: '*',
+7 silly cache add   type: 'range' }
+8 verbose addNamed compass@*
+9 silly addNamed semver.valid null
+10 silly addNamed semver.validRange *
+11 silly addNameRange { name: 'compass', range: '*', hasData: false }
+12 silly mapToRegistry name compass
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/compass
+16 verbose addNameRange registry:https://registry.npmjs.org/compass not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/compass
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 14:57:42
+20 verbose request id 4470c056b82e739b
+21 http request GET https://registry.npmjs.org/compass
+22 http 200 https://registry.npmjs.org/compass
+23 silly get cb [ 200,
+23 silly get   { date: 'Tue, 17 Feb 2015 13:14:20 GMT',
+23 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"C1R8GS3QNS99B12E6LZDEJBWW"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '4830',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     'x-served-by': 'cache-lhr6325-LHR',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1424178860.782755,VS0,VE90',
+23 silly get     vary: 'Accept',
+23 silly get     'keep-alive': 'timeout=10, max=50',
+23 silly get     connection: 'Keep-Alive' } ]
+24 verbose get saving compass to /home/antti/.npm/registry.npmjs.org/compass/.cache.json
+25 silly addNameRange number 2 { name: 'compass', range: '*', hasData: true }
+26 silly addNameRange versions [ 'compass', [ '0.1.0' ] ]
+27 verbose addNamed compass@0.1.0
+28 silly addNamed semver.valid 0.1.0
+29 silly addNamed semver.validRange 0.1.0
+30 silly mapToRegistry name compass
+31 silly mapToRegistry using default registry
+32 silly mapToRegistry registry https://registry.npmjs.org/
+33 silly mapToRegistry uri https://registry.npmjs.org/compass
+34 verbose addRemoteTarball https://registry.npmjs.org/compass/-/compass-0.1.0.tgz not in flight; adding
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/compass/-/compass-0.1.0.tgz',
+35 verbose addRemoteTarball   '174babebcddaf0e37f58abb9a1676d561c824e1f' ]
+36 info retry fetch attempt 1 at 14:57:42
+37 info attempt registry request try #1 at 14:57:42
+38 http fetch GET https://registry.npmjs.org/compass/-/compass-0.1.0.tgz
+39 http fetch 200 https://registry.npmjs.org/compass/-/compass-0.1.0.tgz
+40 silly fetchAndShaCheck shasum 174babebcddaf0e37f58abb9a1676d561c824e1f
+41 verbose addTmpTarball /tmp/npm-3084-e0754573/registry.npmjs.org/compass/-/compass-0.1.0.tgz not in flight; adding
+42 verbose addTmpTarball already have metadata; skipping unpack for compass@0.1.0
+43 silly cache afterAdd compass@0.1.0
+44 verbose afterAdd /home/antti/.npm/compass/0.1.0/package/package.json not in flight; writing
+45 verbose afterAdd /home/antti/.npm/compass/0.1.0/package/package.json written
+46 silly install resolved [ { name: 'compass',
+46 silly install resolved     version: '0.1.0',
+46 silly install resolved     description: 'Compass for node.js',
+46 silly install resolved     main: 'index.js',
+46 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+46 silly install resolved     repository: { type: 'git', url: 'git@github.com:ngryman/compass.git' },
+46 silly install resolved     keywords: [ 'compass', 'sass', 'scss' ],
+46 silly install resolved     author: { name: 'Nicolas Gryman' },
+46 silly install resolved     license: 'MIT',
+46 silly install resolved     devDependencies:
+46 silly install resolved      { mocha: '1.8.x',
+46 silly install resolved        chai: '1.5.x',
+46 silly install resolved        express: '3.1.x',
+46 silly install resolved        supertest: '0.5.x' },
+46 silly install resolved     readme: '# compass\r\n\r\n[Compass](http://compass-style.org) wrapper and middleware for node.js.\r\n\r\n## Install\r\n\r\nEnsure **compass** is already installed ([install compass](http://compass-style.org/install)).\r\n\r\nThen just use **npm**:\r\n\r\n```javascript\r\nnpm install compass\r\n```\r\n\r\n## Usage\r\n\r\n### Middelware\r\n\r\nEnsure **compass** comes before a static middleware. **compass** generates your css files but **does not** serve them. You need a static middleware for that.\r\n\r\n```javascript\r\nvar compass = require(\'compass\'),\r\n    express = require(\'express\')();\r\n\r\napp = express();\r\napp.use(compass({ cwd: __dirname + \'public\' })\r\napp.use(express.static(__dirname + \'public\');\r\n```\r\n\r\n### Manually\r\n\r\nFor now **compass** only wraps the compile action.\r\n\r\n```javascript\r\nvar compass = require(\'compass\');\r\n\r\n// compiles in process.cwd()\r\ncompass.compile(function(err, stdout, stderr) {\r\n    console.log(\'done\');\r\n});\r\n\r\n// compiles in the given directory\r\ncompass.compile({ cwd: __dirname + \'public\' }, function(err, stdout, stderr) {\r\n    console.log(\'done\');\r\n});\r\n```\r\n\r\n## Options\r\n\r\nFor now **compass** only offer the `cwd` option.\r\n\r\nIf you want to customize stuff, please use a `config.rb` ([http://compass-style.org/help/tutorials/configuration-reference](configuration reference))',
+46 silly install resolved     readmeFilename: 'README.md',
+46 silly install resolved     _id: 'compass@0.1.0',
+46 silly install resolved     dist:
+46 silly install resolved      { shasum: '174babebcddaf0e37f58abb9a1676d561c824e1f',
+46 silly install resolved        tarball: 'http://registry.npmjs.org/compass/-/compass-0.1.0.tgz' },
+46 silly install resolved     _npmVersion: '1.1.65',
+46 silly install resolved     _npmUser: { name: 'ngryman', email: 'ngryman@gmail.com' },
+46 silly install resolved     maintainers: [ [Object] ],
+46 silly install resolved     directories: {},
+46 silly install resolved     _shasum: '174babebcddaf0e37f58abb9a1676d561c824e1f',
+46 silly install resolved     _resolved: 'https://registry.npmjs.org/compass/-/compass-0.1.0.tgz',
+46 silly install resolved     _from: 'compass@*' } ]
+47 info install compass@0.1.0 into /usr/lib
+48 info installOne compass@0.1.0
+49 verbose installOne of compass to /usr/lib not in flight; installing
+50 warn locking Error: EACCES, open '/home/antti/.npm/_locks/compass-f66940b0a30b8810.lock'
+50 warn locking  /home/antti/.npm/_locks/compass-f66940b0a30b8810.lock failed { [Error: EACCES, open '/home/antti/.npm/_locks/compass-f66940b0a30b8810.lock']
+50 warn locking   errno: 3,
+50 warn locking   code: 'EACCES',
+50 warn locking   path: '/home/antti/.npm/_locks/compass-f66940b0a30b8810.lock' }
+51 verbose stack Error: Attempt to unlock /usr/lib/node_modules/compass, which hasn't been locked
+51 verbose stack     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:66:11)
+51 verbose stack     at cb (/usr/local/lib/node_modules/npm/lib/install.js:929:5)
+51 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:933:20
+51 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:40:9
+51 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+51 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+51 verbose stack     at Object.oncomplete (fs.js:107:15)
+52 verbose cwd /home/antti/code/me_meanstack/client
+53 error Linux 3.13.0-45-generic
+54 error argv "node" "/usr/local/bin/npm" "install" "compass" "-g"
+55 error node v0.10.25
+56 error npm  v2.5.1
+57 error Attempt to unlock /usr/lib/node_modules/compass, which hasn't been locked
+58 error If you need help, you may report this error at:
+58 error     <http://github.com/npm/npm/issues>
+59 verbose exit [ 1, true ]

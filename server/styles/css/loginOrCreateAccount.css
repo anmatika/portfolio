@@ -1,0 +1,31 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\000033}}
+#loginOrCreateAccount li {
+  list-style: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\000037}}
+#loginOrCreateAccount .boxes {
+  padding: 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 350px;
+  width: 500px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\0000319}}
+#loginOrCreateAccount #loginBox {
+  margin-right: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\0000327}}
+#loginOrCreateAccount #buttons {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\0000330}}
+#loginOrCreateAccount #buttons form#signup {
+  position: absolute;
+  top: 140px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/antti\/code\/meshop\/server\/styles\/loginOrCreateAccount\.scss}line{font-family:\0000335}}
+#loginOrCreateAccount #buttons form#orderguest {
+  position: absolute;
+  left: 250px;
+  top: 140px;
+}

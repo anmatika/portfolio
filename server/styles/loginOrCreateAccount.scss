@@ -1,0 +1,41 @@
+#loginOrCreateAccount{
+	
+	li{
+		list-style: none;
+	}
+
+	.boxes{
+		padding: 50px;
+
+		border: 2px solid black;
+		-webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+       
+        height: 350px;
+        width: 500px;
+	}
+
+	#loginBox {
+		margin-right: 5px;
+	}
+
+	#signupBox {
+
+	}
+
+	#buttons{
+		position: relative;
+
+		form#signup {
+			position: absolute;
+			top: 140px;
+		}
+
+		form#orderguest {
+			position: absolute;
+			left: 250px;
+			top: 140px;
+		}
+	}
+}

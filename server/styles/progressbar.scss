@@ -1,0 +1,41 @@
+@import 'variables';
+
+ul{
+	// background-color: gray;
+	position: relative;
+	
+	li
+	{
+		margin: 0 1px 0 1px;
+		border: 2px solid black;
+		// padding: 10px;
+		padding: 0px;
+		display: block;
+		list-style: none;
+		float: left;
+
+		-webkit-border-top-right-radius: 10px;
+        -moz-border-radius-topright: 10px;
+        border-top-right-radius: 10px;
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-radius-topleft: 10px;
+        border-top-left-radius: 10px;
+        span {
+        	margin: 0px; 
+        	display: block; 
+        	width: 100%; 
+        	height: 100%;
+        	padding: 10px 35px 10px 35px;
+        	text-decoration: inherit;
+        	color: inherit;
+        }
+	}
+}
+
+#progressBar {
+}
+
+.activeProgressBar {
+	background-color: $navbarColor;
+	font-weight: bold;
+}

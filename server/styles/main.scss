@@ -1,0 +1,26 @@
+@import 'variables';
+
+.navbar-inverse {
+	background-color: $navbarColor;
+}
+.navbar-inverse a {
+	color: #fff !important;
+}
+
+#maincontent {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+body { 
+	padding-top:80px; 
+}
+
+.orderBox {
+	-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 2px solid;
+}
