@@ -16,10 +16,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#/">{{ 'about' | translate }}</a>
+          <a href="#/about">{{ 'aboutMe' | translate }}</a>
         </li>
         <li>
-          <a href="#/">{{ 'services' | translate }}</a>
+          <a href="#/blog">{{ 'blog' | translate }}</a>
         </li>
         <li>
           <a ng-href="#/contact">{{'contact' | translate}}</a>
@@ -29,8 +29,8 @@
           <a href="secure/signup">{{'signUp' | translate}}</a>
         </li>
         <li id="login" ng-show="!username || username.length == 0">
-          <!-- <a ng-href="#/login">Login</a> -->
-          <a href="secure/login">{{'login' | translate}}</a>
+          <a ng-href="#/login">Login</a>
+          <!-- <a href="secure/login">{{'login' | translate}}</a> -->
         </li>
 
       </ul>      

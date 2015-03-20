@@ -25,7 +25,9 @@ angular.module('app')
 
 			loginSvc.getUser()
 				.then(function(data) {
-						if (data.local) {
+						if (data.facebook) {
+							$scope.username = data.facebook.name;
+						} else if (data.local){
 							$scope.username = data.local.email;
 						}
 					},

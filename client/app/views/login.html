@@ -18,10 +18,11 @@
                 <input type="password" class="form-control" name="password" ng-model="password">
             </div>
             <button type="button" id="login" ng-click="login()" class="btn btn-warning btn-lg">Login</button>
-            <!-- <button type="button" ng-click="getUser()" class="btn btn-warning btn-lg">Test is logged in</button> -->
+           
         </form>
         <hr>
-        <p>Need an account? <a href="/signup">Signup</a></p>
-        <p>Or go <a href="/">home</a>.</p>
+        <form action="/auth/facebook">
+            <input type="submit" id="facebook_login" class="btn btn-success btn-lg" value="Facebook login">
+        </form>
     </div>
 </div>

@@ -1,5 +1,5 @@
 {
-  "name": "karvinen",
+  "name": "app",
   "subdomain": "amatika-dist",
   "scripts": {
     "start": "index.js"

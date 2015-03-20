@@ -1,0 +1,16 @@
+#blog {
+	#comment {
+		width: 100%;
+	}
+
+	.blog_text {
+		border: 1px solid;
+		padding: 25px;
+	}
+
+	.comments {
+		.commenter_name {
+			font-weight: bold;
+		}
+	}
+}

@@ -15,21 +15,46 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/shop-homepage.css"/>
+    <link rel="stylesheet" href="styles/common.css"/>
     <link rel="stylesheet" href="styles/nav.css"/>
+    <link rel="stylesheet" href="styles/blog.css"/>
     <!-- endbuild -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'> -->
       <!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
       </head>
       <body ng-app="app">
+        <div id="fb-root"></div>
+        <script>
+           window.fbAsyncInit = function() {
+              FB.init({
+                appId: '1024733040876781',
+                xfbml: true,
+                version: 'v2.2'
+              });
+              console.log('fbAsyncInit');
+              FB.getLoginStatus(function(response) {
+                console.log('getLoginStatus: ' + response.toSource());
+              });
+            };
+          (function(d, s, id){
+
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+
+           
+        </script>    
+        
         <div ng-include="'views/nav.html'"></div>
         <!-- /.container -->
         <div class="container">
-        <!-- <ngcart-cart id="{{ item.id }}" name="{{ item.name }}" price="{{ item.price }}" data="item"></ngcart-cart> -->
-
+        
           <!-- Page Content -->
           <div ng-view=""></div>
 
-          <hr>
           <!-- Footer -->
           <footer>
             <div class="row">
@@ -68,6 +93,7 @@
         <script src="scripts/services/productSvc.js"></script>
         <script src="scripts/services/loginSvc.js"></script>
         <script src="scripts/services/signupSvc.js"></script>
+        <script src="scripts/services/postsvc.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/controllers/contact.js"></script>
@@ -76,6 +102,8 @@
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/order.js"></script>
         <script src="scripts/controllers/customerdetails.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/blog.js"></script>
         <!-- endbuild -->
         
         <!-- hides mobile menu when clicked  -->

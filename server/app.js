@@ -132,7 +132,7 @@ app.all('/secure/*', ensureSecure); // at top of routing calls
 /**
 * Routes
 */
-require('./routes/routes')(router, passport);
+require('./routes/routes')(router, passport, mongoose);
 app.use(router);
 
 module.exports = app;

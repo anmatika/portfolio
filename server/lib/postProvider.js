@@ -1,77 +1,92 @@
-// Ref: https://github.com/cmarin/MongoDB-Node-Express-Blog/blob/master/postprovider.js
-var mongoose = require("mongoose");
-mongoose.connect(mongoConn);  
+var util = require('util');
+// Ref: https://github.com/cmarin/MongoDB-Node-Express-Blog/blob/master/Commentprovider.js
+// var mongoose = require("mongoose");
+var mongoose = {};
+var Schema, ObjectId;
 
-var Schema = mongoose.Schema
-, ObjectId = Schema.ObjectId;
+var Comment;
 
-var Comments = new Schema({
-    person : String
-    , comment : String
-    , created_at : Date
-});
 
-var Post = new Schema({
-    author : ObjectId
-    , title : String
-    , body : String
-    , created_at : Date
-    , comments : [Comments]
-});
-
-mongoose.model('Post', Post);
-var Post = mongoose.model('Post');
-
-PostProvider = function () {};
-
-//Find all posts
-PostProvider.prototype.findAll = function(callback) {
-Post.find({}, function (err, posts) {
-        callback( null, posts )
+CommentProvider = function(m) {
+    mongoose = m;
+    Schema = mongoose.Schema;
+    ObjectId = Schema.ObjectId;
+    Comment = new Schema({
+        commentid: ObjectId,
+        commenterid: String,
+        commenter_name: String,
+        postid: String,
+        title: String,
+        body: String,
+        created_at: Date
     });
-};
-//Find post by ID
-PostProvider.prototype.findById = function(id, callback) {
-    Post.findById(id, function (err, post) {
-    if (!err) {
-        callback(null, post);
-    }
-});
-};
-//Update post by ID
-PostProvider.prototype.updateById = function(id, body, callback) {
-    Post.findById(id, function (err, post) {
-    if (!err) {
-        post.title = body.title;
-        post.body = body.body;
-        post.save(function (err) {
-            callback();
-        });
-    }
-    });
-};
-//Create a new post
-PostProvider.prototype.save = function(params, callback) {
-    var post = new Post({title: params['title'], body: params['body'], created_at: new Date()});
-    post.save(function (err) {
-        callback();
-    });
-};
-//Add comment to post
-PostProvider.prototype.addCommentToPost = function(postId, comment, callback) {
-    this.findById(postId, function(error, post) {
-        if(error){
-            callback(error)
-        }
-        else {
-            post.comments.push(comment);
-            post.save(function (err) {
-                if(!err){
-                    callback();
+
+    mongoose.model('Comment', Comment);
+    Comment = mongoose.model('Comment');
+
+    return {
+        //Create a new Comment
+        save: function(params, callback) {
+            var comment = new Comment({
+                title: params['title'],
+                body: params['body'],
+                postid: params['postid'],
+                commenterid: params['commenterid'],
+                commenter_name: params['commenter_name'],
+                created_at: new Date()
+            });
+            comment.save(function(err, comment) {
+                console.log('comment: ' + util.inspect(comment, {
+                    showHidden: false,
+                    depth: null
+                }));
+
+                callback(comment._id);
+            });
+        },
+        //Find Comment by ID
+        findById: function(id, callback) {
+            Comment.findById(id, function(err, comment) {
+                if (!err) {
+                    callback(null, comment);
                 }
+            });
+        },
+        findByPostId: function(postid, callback) {
+
+            Comment.find({
+                'postid': postid
+            }, function(err, comments) {
+                if (!err) {
+                    callback(null, comments);
+                } else {
+                    callback(err, null);
+                }
+            });
+        }
+    }
+};
+
+//Find all Comments
+CommentProvider.prototype.findAll = function(callback) {
+    Comment.find({}, function(err, Comments) {
+        callback(null, Comments)
+    });
+};
+
+//Update Comment by ID
+CommentProvider.prototype.updateById = function(id, body, callback) {
+    Comment.findById(id, function(err, Comment) {
+        if (!err) {
+            Comment.title = body.title;
+            Comment.body = body.body;
+            Comment.save(function(err) {
+                callback();
             });
         }
     });
 };
 
-exports.PostProvider = PostProvider;
+
+
+module.exports = CommentProvider;

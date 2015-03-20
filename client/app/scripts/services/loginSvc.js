@@ -41,6 +41,7 @@ angular.module('app')
         
         $http.get('/getuser').
         success(function(data, status, headers, config) {
+          console.log("my object: %o", data)
           deferred.resolve(data);
           // this callback will be called asynchronously
           // when the response is available
