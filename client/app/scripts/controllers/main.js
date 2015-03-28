@@ -8,18 +8,18 @@
  * Controller of the app
  */
 angular.module('app')
-	.controller('MainCtrl', function($scope, productSvc) {
+	.controller('MainCtrl', function($scope, thumbnailSvc) {
 
-		$scope.getProducts = function() {
-			productSvc.getProducts()
-				.then(function(products) {
-						console.log(products);
-						$scope.products = products;
+		$scope.getThumbnails = function() {
+			thumbnailSvc.getThumbnails()
+				.then(function(thumbnails) {
+						console.log('thumbnails: ' + thumbnails);
+						$scope.thumbnails = thumbnails;
 					},
 					function(reason) {
 						console.log(reason);
 					});
 		}
 
-		$scope.getProducts();
+		$scope.getThumbnails();
 	});

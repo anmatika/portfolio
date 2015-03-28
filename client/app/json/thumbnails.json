@@ -1,0 +1,33 @@
+[
+    {
+        "title": "AngularJS",
+        "text": "Loremipsum",
+        "image": "images/angular.png",
+        "route": "/blog/angular"
+    },
+    {
+        "title": "NodeJS",
+        "text": "Loremipsum",
+        "image": "images/nodejs.png"
+    },
+    {
+        "title": "GruntJS",
+        "text": "Loremipsum",
+        "image": "images/grunt.png"
+    },
+    {
+        "title": "Bower",
+        "text": "Loremipsum",
+        "image": "images/bower.png"
+    },
+    {
+        "title": "Yeoman",
+        "text": "Loremipsum",
+        "image": "images/yo.png"
+    },
+    {
+        "title": "Git",
+        "text": "Loremipsum",
+        "image": "images/git.png"
+    }
+]

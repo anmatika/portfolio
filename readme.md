@@ -1,6 +1,7 @@
 sudo npm install -g bower
 sudo npm install -g grunt-cli
 sudo apt-get install ruby
+sudo apt-get install ruby-dev (without this native extension build fails)
 sudo gem install compass
 
 # Follow these instructions
