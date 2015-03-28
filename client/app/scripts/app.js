@@ -18,9 +18,10 @@ angular
     'ngSanitize',
     'ngTouch',
     'ngCart',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'zeroclipboard'
   ])
-  .config(function($routeProvider, $translateProvider) {
+  .config(function($routeProvider, $translateProvider, uiZeroclipConfigProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -92,4 +93,9 @@ angular
         account: 'Tili'
       });
       $translateProvider.preferredLanguage('fi');
+
+       // config ZeroClipboard
+      uiZeroclipConfigProvider.setZcConf({
+        swfPath: '../bower_components/zeroclipboard/dist/ZeroClipboard.swf'
+      });
   });

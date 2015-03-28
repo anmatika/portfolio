@@ -1,47 +1,43 @@
 <div id="blog">
-	<div class="row blogpost">
-		<div class="blog_text">
+	<div class="row blogpost box">
+		<div class="col-sm-12 blog_text">
 			<hr>
 			<h2 class="intro-text text-center">
 			Setting up <strong>Angular</strong>
+			<img src="images/angular-js.png">
 			</h2>
 			<hr>
 			
-			Install yeoman
-			<div class="well">
-				npm install -g yeoman
-			</div>
-			
-			Create route
-			<div class="well">
-				yo angular:route routename
-			</div>
-			
-		</div>
-		<div class="comments">
-			<h4> Comments </h4>
-			<ul ng-repeat="comment in comments">
-				<li class="li_no_style">
-					<div class="commenter_name">{{comment.commenter_name}}</div> 
-					<div class="well comment">{{ comment.body }}</div>
-				</li>
-			</ul>
-			<form method="post">
-				<textarea id="comment" ng-model="comment" rows="5"></textarea>
-				<button ng-click="post(123)" ng-disabled="userid==0" type="button" class="btn btn-success btn-lg pull-right">Post comment</button>
-			</form>
-			<img class="profile_image" src="{{user_img}}">
-			<div class="username">
-				{{ username }}
-			</div>
+			<div ng-repeat="paragraph in blogpost.paragraphs">
+				<h4 class="bold"> {{paragraph.title}} </h4>
+				<p>
+					<div ng-repeat="step in paragraph.steps">
+						<div class="step_text">{{step.title}}</div>
+						<div class="well">
+							<div class="row">
+								<div class="col-sm-11">
+									<div ng-model="step" class="step_command">{{step.command}}</div>
+								</div>
+								<div class="col-sm-1">
+									<button ui-zeroclip data-clipboard-text="{{ step.command }}" class="step_copy_btn pull-right" title="Click to copy me.">
+										<span class="octicon octicon-clippy"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>												
+				</p>
+			</div>						
 		</div>
 	</div>
 </div>
+
+
 <!-- <div id="disqus_thread"></div>
 <script type="text/javascript">
 /* * * CONFIGURATION VARIABLES * * */
 var disqus_shortname = 'amatikaportfolio';
-
+var disqus_developer = 1;
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {
 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

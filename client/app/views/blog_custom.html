@@ -1,0 +1,53 @@
+<div id="blog">
+	<div class="row blogpost">
+		<div class="blog_text">
+			<hr>
+			<h2 class="intro-text text-center">
+			Setting up <strong>Angular</strong>
+			</h2>
+			<hr>
+			
+			Install yeoman
+			<div class="well">
+				npm install -g yeoman
+			</div>
+			
+			Create route
+			<div class="well">
+				yo angular:route routename
+			</div>
+			
+		</div>
+		<div class="comments">
+			<h4> Comments </h4>
+			<ul ng-repeat="comment in comments">
+				<li class="li_no_style">
+					<div class="commenter_name">{{comment.commenter_name}}</div> 
+					<div class="comment_created">{{comment.created_at | date:'d.M.yyyy HH:mm'}}</div> 
+					<div class="well comment">{{ comment.body }}</div>
+				</li>
+			</ul>
+			<form method="post">
+				<textarea id="comment" ng-model="comment" rows="5"></textarea>
+				<button ng-click="post(123)" ng-disabled="userid==0" type="button" class="btn btn-success btn-lg pull-right">Post comment</button>
+			</form>
+			<img class="profile_image" src="{{user_img}}">
+			<div class="username">
+				{{ username }}
+			</div>
+		</div>
+	</div>
+</div>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES * * */
+var disqus_shortname = 'amatikaportfolio';
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>

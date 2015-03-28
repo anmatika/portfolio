@@ -4,7 +4,6 @@
 	}
 
 	.blog_text {
-		border: 1px solid;
 		padding: 25px;
 	}
 
@@ -13,4 +12,20 @@
 			font-weight: bold;
 		}
 	}
+	
+	.well {
+		// position: relative;
+		padding-bottom: auto;
+		padding-top: auto;
+		vertical-align: middle;
+	}
+
+	.step_command {
+		// position: absolute;
+	}
+	.zeroclipbtn {
+		// position: absolute;
+		float: left;
+	}
+
 }
