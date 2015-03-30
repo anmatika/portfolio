@@ -1,0 +1,16 @@
+#aboutme {
+	.alert {
+		position:relative;
+	 	width: 400px;
+	}
+	ul {
+		display: block;
+		li {
+			font-size: 1em;
+			span:nth-child(2) {
+				position: absolute;
+				left: 200px;
+			}
+		}
+	}
+}
