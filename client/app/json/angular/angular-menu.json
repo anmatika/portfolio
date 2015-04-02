@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Setting up angular",
+        "text": "Loremipsum",
+        "image": "",
+        "route": "/blog/angular/settingup"
+    },
+    {
+        "title": "Working with directives",
+        "text": "Loremipsum",
+        "image": "",
+        "route": "/blog/angular/directives"
+    }
+]

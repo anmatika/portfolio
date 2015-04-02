@@ -8,12 +8,14 @@
     {
         "title": "NodeJS",
         "text": "Loremipsum",
-        "image": "images/nodejs.png"
+        "image": "images/nodejs.png",
+        "route": "/blog/node"
     },
     {
         "title": "GruntJS",
         "text": "Loremipsum",
-        "image": "images/grunt.png"
+        "image": "images/grunt.png",
+        "route": "/blog/grunt"
     },
     {
         "title": "Bower",
@@ -29,5 +31,10 @@
         "title": "Git",
         "text": "Loremipsum",
         "image": "images/git.png"
+    }, {
+        "title": "Linux",
+        "text": "Loremipsum",
+        "image": "images/linux.png",
+        "route": "/blog/linux"
     }
 ]

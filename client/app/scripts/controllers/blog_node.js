@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name appApp.controller:BlogAngularCtrl
+ * @name appApp.controller:BlogNodeCtrl
  * @description
- * # BlogAngularCtrl
+ * # BlogNodeCtrl
  * Controller of the appApp
  */
 angular.module('app')
-  .controller('BlogAngularCtrl', function ($scope, thumbnailSvc) {
-    $scope.getThumbnails = function() {
-			thumbnailSvc.getThumbnails('/json/angular/angular-menu.json')
+	.controller('BlogNodeCtrl', function($scope, thumbnailSvc) {
+		$scope.getThumbnails = function() {
+			thumbnailSvc.getThumbnails('/json/node/node-menu.json')
 				.then(function(thumbnails) {
 						console.log('thumbnails: ' + thumbnails);
 						$scope.thumbnails = thumbnails;
@@ -21,4 +21,4 @@ angular.module('app')
 		}
 
 		$scope.getThumbnails();
-  });
+	});

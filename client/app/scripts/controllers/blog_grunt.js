@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name appApp.controller:BlogAngularCtrl
+ * @name appApp.controller:BlogGruntCtrl
  * @description
- * # BlogAngularCtrl
+ * # BlogGruntCtrl
  * Controller of the appApp
  */
 angular.module('app')
-  .controller('BlogAngularCtrl', function ($scope, thumbnailSvc) {
+  .controller('BlogGruntCtrl', function ($scope, thumbnailSvc) {
     $scope.getThumbnails = function() {
-			thumbnailSvc.getThumbnails('/json/angular/angular-menu.json')
+			thumbnailSvc.getThumbnails('/json/grunt/grunt-menu.json')
 				.then(function(thumbnails) {
 						console.log('thumbnails: ' + thumbnails);
 						$scope.thumbnails = thumbnails;
