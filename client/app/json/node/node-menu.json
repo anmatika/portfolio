@@ -3,6 +3,6 @@
         "title": "Using Express as http server",
         "text": "Loremipsum",
         "image": "",
-        "route": "/blog/node/"
+        "route": "/blog/node/expresshttp"
     }
 ]

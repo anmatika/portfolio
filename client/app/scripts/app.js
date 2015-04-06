@@ -71,9 +71,17 @@ angular
         templateUrl: 'views/blog_node.html',
         controller: 'BlogNodeCtrl'
       })
+      .when('/blog/node/expresshttp', {
+        templateUrl: 'views/blog_node_expresshttp.html',
+        controller: 'BlogNodeCtrl'
+      })
       .when('/blog/grunt', {
         templateUrl: 'views/blog_grunt.html',
         controller: 'BlogGruntCtrl'
+      })
+      .when('/blog/angular/directives', {
+        templateUrl: 'views/blog_angular_directives.html',
+        controller: 'BlogAngularCtrl'
       })
       .otherwise({
         redirectTo: '/'

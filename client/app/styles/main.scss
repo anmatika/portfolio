@@ -1,3 +1,8 @@
+@font-face { font-family: Code_Pro_Light_Demo; src: url('../fonts/Code_Pro_Light_Demo.otf'); } 
+@font-face { font-family: Ubuntu-R; src: url('../fonts/Ubuntu-R.ttf'); } 
+body {
+	font-family: 'Ubuntu-R', serif;
+}
 #main{
 	#products {
 		.alert {
