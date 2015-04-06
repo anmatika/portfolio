@@ -88,7 +88,8 @@ angular
       });
 
       $translateProvider.translations('en', {
-        about: 'About',
+        aboutMe: 'About me',
+        blog: 'Blog',
         services: 'Services',
         contact: 'Contact',
         signUp: 'Sign up',
@@ -102,7 +103,8 @@ angular
         logout: 'Log out',
         account: 'Account'
       }).translations('fi', {
-        about: 'Tietoja meistä',
+        aboutMe: 'Tietoja',
+        blog: 'Blogi',
         services: 'Palvelut',
         contact: 'Yhteystiedot',
         signUp: 'Rekisteröidy',

@@ -3,25 +3,9 @@
 body {
 	font-family: 'Ubuntu-R', serif;
 }
-#main{
-	#products {
-		.alert {
-		    border: 1px solid transparent;
-		    border-radius: 4px;
-		    margin-bottom: 0px;
-		    padding: 6px;
-		    // position: absolute;
-		    // bottom: 0px;
-		}
 
-		.btn-lg {
-			float: right;
-		}
-
-		#product {
-			position: relative;
-			padding: 5px;
-			padding-bottom: 20px;
-		}
-	}	
-}
+.clip {
+	// -webkit-mask-image: url(../images/circle.svg)
+	  clip-path: url(#svgPath);
+	 // clip-path: polygon(626px 463px,765px 236px,687px 31px,271px 100px,70px 10px,49px 250px,133px 406px,374px 462px,529px 393px);
+}	
