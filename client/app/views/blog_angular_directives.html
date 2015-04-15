@@ -1,10 +1,17 @@
 <div class="blog_angular_directives">
-	<ul>
-		What is directive
-		<li>Can make html templates</li>
-		<li></li>
-	</ul>
+	
+	<h2>What is angular directive</h2>
+	<p>You can extend HTML and make own reusable components with them</p>
+
 	<h2>Example: Repeat elements directive </h2>
+
+	<p>
+		Goal: creating a component for repeating thumbnail elements on the page.
+	</p>
+	<p>
+		Let's make angular directive called "thumbnailRepeater". Directive gets its template from the file template/thumbnail_repeater.html.
+	</p>
+
 	<pre class="">
 		<code class="">
 		
@@ -18,6 +25,7 @@
 		</code>
 	</pre>
 	<h2>Template</h2>
+	In the template we go through the model <i>cars</i> and print out the car image, title and text. Button styled link is rendered which routes to given route.
 	<pre class="">
 		<code class="">
 		<xmp>
@@ -39,6 +47,7 @@
 		</code>
 	</pre>
 	<h2>Usage</h2>
+	<p>Just place thumbnail-repeater tag into view.</p>
 	<pre class="">
 		<code class="">
 		<xmp>

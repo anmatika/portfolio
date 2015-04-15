@@ -1,13 +1,13 @@
 [
     {
         "title": "Setting up angular",
-        "text": "Loremipsum",
+        "text": "Here we go through how to quickly set up angular dev environment.",
         "image": "",
         "route": "/blog/angular/settingup"
     },
     {
         "title": "Working with directives",
-        "text": "Loremipsum",
+        "text": "Quick look on Angular directives.",
         "image": "",
         "route": "/blog/angular/directives"
     }

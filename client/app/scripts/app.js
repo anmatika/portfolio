@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('app', [
+  .module('portfolioApp', [
     'ngLocale',
     'ngAnimate',
     'ngCookies',
@@ -82,6 +82,18 @@ angular
       .when('/blog/angular/directives', {
         templateUrl: 'views/blog_angular_directives.html',
         controller: 'BlogAngularCtrl'
+      })
+      .when('/blog/grunt/automation', {
+        templateUrl: 'views/blog_grunt_automation.html',
+        controller: 'BlogGruntCtrl'
+      })
+      .when('/blog/bower', {
+        templateUrl: 'views/blog_bower.html',
+        controller: 'BlogBowerCtrl'
+      })
+      .when('/blog/bower/inject', {
+        templateUrl: 'views/blog_bower_inject.html',
+        controller: 'BlogBowerCtrl'
       })
       .otherwise({
         redirectTo: '/'

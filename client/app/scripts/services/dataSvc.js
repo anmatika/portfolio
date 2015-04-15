@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc service
- * @name appApp.thumbnail
+ * @name app.data
  * @description
- * # thumbnail
- * Service in the appApp.
+ * # data service
+ * Service in the app.
  */
-angular.module('app')
-  .service('thumbnailSvc', function($http, $q) {
-    function getThumbnails(path) {
+angular.module('portfolioApp')
+  .service('dataSvc', function($http, $q) {
+    function getData(path) {
 
       var deferred = $q.defer();
 
@@ -30,7 +30,7 @@ angular.module('app')
    
 
     return {
-      getThumbnails: getThumbnails
+      getData: getData
     }
 
   });

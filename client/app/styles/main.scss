@@ -1,8 +1,9 @@
 @font-face { font-family: Code_Pro_Light_Demo; src: url('../fonts/Code_Pro_Light_Demo.otf'); } 
 @font-face { font-family: Ubuntu-R; src: url('../fonts/Ubuntu-R.ttf'); } 
-body {
-	font-family: 'Ubuntu-R', serif;
-}
+@font-face { font-family: Headline; src: url('../fonts/HEADOH__.TTF'); } 
+@font-face { font-family: Franchise-Free-Bold; src: url('../fonts/Franchise-Free-Bold.ttf'); } 
+
+
 
 .clip {
 	// -webkit-mask-image: url(../images/circle.svg)

@@ -1,39 +1,40 @@
 [
     {
         "title": "AngularJS",
-        "text": "Loremipsum",
+        "text": "Javascript framework for the client side.",
         "image": "images/angular.png",
         "route": "/blog/angular"
     },
     {
         "title": "NodeJS",
-        "text": "Loremipsum",
+        "text": "Javascript For the server side applications.",
         "image": "images/nodejs.png",
         "route": "/blog/node"
     },
     {
         "title": "GruntJS",
-        "text": "Loremipsum",
+        "text": "For javascript automation.",
         "image": "images/grunt.png",
         "route": "/blog/grunt"
     },
     {
         "title": "Bower",
-        "text": "Loremipsum",
-        "image": "images/bower.png"
+        "text": "Fetch depedencies for you.",
+        "image": "images/bower.png",
+        "route": "blog/bower"
     },
     {
         "title": "Yeoman",
-        "text": "Loremipsum",
+        "text": "For scaffolding things.",
         "image": "images/yo.png"
     },
     {
         "title": "Git",
-        "text": "Loremipsum",
+        "text": "The version control.",
         "image": "images/git.png"
     }, {
         "title": "Linux",
-        "text": "Loremipsum",
+        "text": "The OS.",
         "image": "images/linux.png",
         "route": "/blog/linux"
     }

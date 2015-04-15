@@ -1,0 +1,36 @@
+<div class="row blogpost box">
+	<div class="col-sm-12 blog_text">
+		<hr>
+		<h2 class="intro-text text-center">
+		Setting up <strong>Angular</strong>
+		<img src="images/angular-js.png">
+		</h2>
+		<hr>
+		
+		<div ng-repeat="paragraph in blogpost.paragraphs">
+			<h2 class="bold"> {{paragraph.title}} </h2>
+			<div ng-repeat="p in paragraph.paragraphs">
+				<p>{{ p.text }}</p>
+			</div>
+			<p>
+				<div ng-repeat="step in paragraph.steps">
+					<div class="step_title">{{step.title}}</div>
+					<div class="step_text"><p>{{step.text}}</p></div>
+					<div class="well">
+						<div class="row">
+							<div class="col-sm-11">
+								<div ng-model="step" class="step_command">	{{step.command}}
+								</div>
+							</div>
+							<div class="col-sm-1">
+								<button ui-zeroclip data-clipboard-text="{{ step.command }}" class="step_copy_btn pull-right" title="Click to copy me.">
+								<span class="octicon octicon-clippy"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</p>
+		</div>
+	</div>
+</div>

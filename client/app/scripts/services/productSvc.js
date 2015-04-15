@@ -7,7 +7,7 @@
  * # productSvc
  * Service in the app.
  */
-angular.module('app')
+angular.module('portfolioApp')
   .service('productSvc', function ($http, $q) {
      
       function getProducts() {

@@ -1,5 +1,5 @@
 {
-  "name": "meshop",
+  "name": "portfolio",
   "subdomain": "amatika-dist",
   "scripts": {
     "start": "index.js"

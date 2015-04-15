@@ -21,106 +21,100 @@
     <link rel="stylesheet" href="styles/blog.css"/>
     <link rel="stylesheet" href="styles/about.css"/>
     <!-- endbuild -->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">  
-    </head>
-      <body ng-app="app">
-        <div id="fb-root"></div>
-        <script>
-           window.fbAsyncInit = function() {
-              FB.init({
-                appId: '1024733040876781',
-                xfbml: true,
-                version: 'v2.2'
-              });
-              console.log('fbAsyncInit');
-              FB.getLoginStatus(function(response) {
-                console.log('getLoginStatus: ' + response.toSource());
-              });
-            };
-          (function(d, s, id){
-
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-
-           
-        </script>    
-        
-        <div ng-include="'views/nav.html'"></div>
-        <!-- /.container -->
-        <div class="container">
-        
-          <!-- Page Content -->
-          <div ng-view=""></div>
-
-          <!-- Footer -->
-          <footer>
-            <div class="row">
-              <div class="col-lg-12">
-                <p>&copy;matika 2015</p>
-              </div>
-            </div>
-          </footer>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-app="portfolioApp">
+    <div id="fb-root"></div>
+    <script>
+    window.fbAsyncInit = function() {
+    FB.init({
+    appId: '1024733040876781',
+    xfbml: true,
+    version: 'v2.2'
+    });
+    console.log('fbAsyncInit');
+    FB.getLoginStatus(function(response) {
+    console.log('getLoginStatus: ' + response.toSource());
+    });
+    };
+    (function(d, s, id){
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    
+    </script>
+    
+    <div ng-include="'views/nav.html'"></div>
+    <!-- /.container -->
+    <div class="container">
+      
+      <!-- Page Content -->
+      <div ng-view=""></div>
+      
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>&copy;matika 2015</p>
+          </div>
         </div>
-        <!-- build:js(.) scripts/oldieshim.js -->
-        <!--[if lt IE 9]>
-        <script src="bower_components/es5-shim/es5-shim.js"></script>
-        <script src="bower_components/json3/lib/json3.js"></script>
-        <![endif]-->
-        <!-- endbuild -->
-        <!-- build:js(.) scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/angular/angular.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="bower_components/angular-animate/angular-animate.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="bower_components/angular-touch/angular-touch.js"></script>
-        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="bower_components/ngcart/dist/ngCart.js"></script>
-        <script src="bower_components/angular-translate/angular-translate.js"></script>
-        <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
-        <script src="bower_components/angular-zeroclipboard/src/angular-zeroclipboard.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/angular-locale_fi.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/directives/directives.js"></script>
-        <script src="scripts/services/productSvc.js"></script>
-        <script src="scripts/services/loginSvc.js"></script>
-        <script src="scripts/services/signupSvc.js"></script>
-        <script src="scripts/services/postsvc.js"></script>
-        <script src="scripts/services/thumbnailSvc.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/nav.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/controllers/cart.js"></script>
-        <script src="scripts/controllers/signup.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/order.js"></script>
-        <script src="scripts/controllers/customerdetails.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/blog.js"></script>
-        <script src="scripts/controllers/angular.js"></script>
-        <script src="scripts/controllers/blog_angular.js"></script>
-        <script src="scripts/controllers/blog_angular_settingup.js"></script>
-        <script src="scripts/controllers/blog_node.js"></script>
-        <script src="scripts/directives/thumbnailrepeater.js"></script>
-        <script src="scripts/controllers/blog_grunt.js"></script>
-        <!-- endbuild -->
-        
-        <!-- hides mobile menu when clicked  -->
-        <script>$('.navbar-collapse > li a').click(function(){
-           $('.collapse.in').removeClass('in').css('height', '0');
-           window.scrollTo(0, 0);
-        });</script>
-        
-      </body>
-    </html>
+      </div>
+    </footer>
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ngcart/dist/ngCart.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
+    <script src="bower_components/angular-zeroclipboard/src/angular-zeroclipboard.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/angular-locale_fi.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/loginSvc.js"></script>
+    <script src="scripts/services/signupSvc.js"></script>
+    <script src="scripts/services/dataSvc.js"></script>
+    <script src="scripts/directives/thumbnailrepeater.js"></script>
+    <script src="scripts/directives/blogPost.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <script src="scripts/controllers/contact.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/blog.js"></script>
+    <script src="scripts/controllers/blog_angular.js"></script>
+    <script src="scripts/controllers/blog_angular_settingup.js"></script>
+    <script src="scripts/controllers/blog_node.js"></script>
+    <script src="scripts/controllers/blog_grunt.js"></script>
+    <script src="scripts/controllers/blog_bower.js"></script>
+    <!-- endbuild -->
+    
+    <!-- hides mobile menu when clicked  -->
+    <script>$('.navbar-collapse > li a').click(function(){
+    $('.collapse.in').removeClass('in').css('height', '0');
+    window.scrollTo(0, 0);
+    });</script>
+    
+  </body>
+</html>

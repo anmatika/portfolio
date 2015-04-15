@@ -7,18 +7,18 @@
  * # BlogGruntCtrl
  * Controller of the appApp
  */
-angular.module('app')
-  .controller('BlogGruntCtrl', function ($scope, thumbnailSvc) {
-    $scope.getThumbnails = function() {
-			thumbnailSvc.getThumbnails('/json/grunt/grunt-menu.json')
-				.then(function(thumbnails) {
-						console.log('thumbnails: ' + thumbnails);
-						$scope.thumbnails = thumbnails;
+angular.module('portfolioApp')
+  .controller('BlogGruntCtrl', function ($scope, dataSvc) {
+    $scope.getData = function() {
+			dataSvc.getData('/json/grunt/grunt-menu.json')
+				.then(function(data) {
+						console.log('data: ' + data);
+						$scope.thumbnails = data;
 					},
 					function(reason) {
 						console.log(reason);
 					});
 		}
 
-		$scope.getThumbnails();
+		$scope.getData();
   });

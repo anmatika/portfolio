@@ -9,18 +9,6 @@
 				"steps": [{
 					"title": "Create route",
 					"command": "yo angular:route routename"
-				}, {
-					"title": "Install bower",
-					"command": "sudo npm install -g bower"
-				}, {
-					"title": "Install grunt",
-					"command": "sudo npm install -g grunt-cli"
-				}, {
-					"title": "Install Ruby for compass (optional)",
-					"command": "sudo apt-get install ruby"
-				}, {
-					"title": "Install Compass (optional)",
-					"command": "sudo gem install compass"
 				}]
 			}, {
 				"title": "Steps",

@@ -7,9 +7,9 @@
  * # thumbnailRepeater
  */
 angular.module('portfolioApp')
-  .directive('thumbnailRepeater', function () {
+  .directive('blogPost', function () {
     return {
-      templateUrl: 'template/thumbnailRepeater.html',
+      templateUrl: 'template/blogPost.html',
       restrict: 'E'
     };
   });

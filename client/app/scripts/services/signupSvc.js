@@ -7,7 +7,7 @@
  * # signuopSvc
  * Service in the app.
  */
-angular.module('app')
+angular.module('portfolioApp')
   .service('signupSvc', function($http, $q) {
 
     return {

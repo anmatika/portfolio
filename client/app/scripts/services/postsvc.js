@@ -7,7 +7,7 @@
  * # postSvc
  * Service in the appApp.
  */
-angular.module('app')
+angular.module('portfolioApp')
   .service('postSvc', function ($http, $q) {
     // AngularJS will instantiate a singleton by calling "new" on this function
       return {

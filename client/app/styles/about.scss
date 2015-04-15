@@ -1,16 +1,49 @@
 #aboutme {
-	.alert {
+	#whoAmI {
 		position:relative;
-	 	width: 400px;
+	 	
+	 	height: 100%;
+	 	// margin-top: 300px;
 	}
 	ul {
+		
 		display: block;
 		li {
 			font-size: 1em;
+
 			span:nth-child(2) {
 				position: absolute;
-				left: 200px;
+				left: 300px;
+				padding-right: 50px;
 			}
 		}
 	}
+
+	#row_professional_history {
+		margin-top: 100px;
+		ul {
+			margin-top: 50px;
+			li {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	.jobhistory-info {
+		position:relative;
+	 	// width: 100%;
+	 	ul {
+	 		padding-bottom: 100px;
+ 			padding-right: 100px;
+	 	}
+	 
+	}
+
+
+	// #ul_professional_history {
+ // 			li {
+ // 				padding-bottom: 100px;
+ // 				padding-right: 100px;
+ // 			}
+	//  	}
 }

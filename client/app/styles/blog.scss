@@ -20,8 +20,16 @@
 		vertical-align: middle;
 	}
 
+	.caption {
+		height: 100%;
+		padding: 10px;
+	}
+
 	.step_command {
 		// position: absolute;
+	}
+	.step_title {
+		font-weight: bold;	
 	}
 	.zeroclipbtn {
 		// position: absolute;

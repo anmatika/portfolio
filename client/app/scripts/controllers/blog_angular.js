@@ -7,18 +7,18 @@
  * # BlogAngularCtrl
  * Controller of the appApp
  */
-angular.module('app')
-  .controller('BlogAngularCtrl', function ($scope, thumbnailSvc) {
-    $scope.getThumbnails = function() {
-			thumbnailSvc.getThumbnails('/json/angular/angular-menu.json')
-				.then(function(thumbnails) {
-						console.log('thumbnails: ' + thumbnails);
-						$scope.thumbnails = thumbnails;
+angular.module('portfolioApp')
+  .controller('BlogAngularCtrl', function ($scope, dataSvc) {
+    $scope.getData = function() {
+			dataSvc.getData('/json/angular/angular-menu.json')
+				.then(function(data) {
+						console.log('data: ' + data);
+						$scope.thumbnails = data;
 					},
 					function(reason) {
 						console.log(reason);
 					});
 		}
 
-		$scope.getThumbnails();
+		$scope.getData();
   });

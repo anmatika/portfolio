@@ -7,7 +7,7 @@
  * # loginSvc
  * Service in the app.
  */
-angular.module('app')
+angular.module('portfolioApp')
   .service('loginSvc', function($http, $q) {
 
     return {
