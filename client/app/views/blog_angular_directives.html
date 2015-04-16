@@ -1,58 +1,60 @@
 <div class="blog_angular_directives">
 	
-	<h2>What is angular directive</h2>
-	<p>You can extend HTML and make own reusable components with them</p>
-
-	<h2>Example: Repeat elements directive </h2>
-
-	<p>
-		Goal: creating a component for repeating thumbnail elements on the page.
-	</p>
-	<p>
-		Let's make angular directive called "thumbnailRepeater". Directive gets its template from the file template/thumbnail_repeater.html.
-	</p>
-
-	<pre class="">
-		<code class="">
+	<div class="box">
+		<h2>What is angular directive</h2>
+		<p>You can extend HTML and make easily own reusable components with them.</p>
 		
-		angular.module('app')
-		  .directive('thumbnailRepeater', function () {
-		    return {
-		      templateUrl: 'template/thumbnail_repeater.html',
-		      restrict: 'E'
-		    };
-		  });
-		</code>
-	</pre>
-	<h2>Template</h2>
-	In the template we go through the model <i>cars</i> and print out the car image, title and text. Button styled link is rendered which routes to given route.
-	<pre class="">
-		<code class="">
-		<xmp>
-		<div ng-repeat="car in cars">
-			<div class="col-sm-6 col-md-4">
-				<div class="car">
-					<img src="{{ car.image }}" alt="...">
-					<div class="caption">
-						<h3>{{ car.title }}</h3>
-						<p>{{ car.text }}</p>
-						<p>
-							<a href="#{{car.route}}" class="btn btn-primary" role="button">Read</a>
-						</p>
+		<h2>Example: Repeat elements directive </h2>
+		
+		<p>
+			Goal: creating a component for repeating thumbnail elements on the page.
+		</p>
+		<p>
+			Let's make angular directive called "thumbnailRepeater". Directive gets its template from the file template/thumbnail_repeater.html.
+		</p>
+		
+		<pre class="">
+			<code class="">
+			
+			angular.module('app')
+			  .directive('thumbnailRepeater', function () {
+			    return {
+			      templateUrl: 'template/thumbnail_repeater.html',
+			      restrict: 'E'
+			    };
+			  });
+			</code>
+		</pre>
+		<h2>Template</h2>
+		In the template we go through the model <i>cars</i> and print out the car image, title and text. Button styled link is rendered which routes to given route.
+		<pre class="">
+			<code class="">
+			<xmp>
+			<div ng-repeat="car in cars">
+				<div class="col-sm-6 col-md-4">
+					<div class="car">
+						<img src="{{ car.image }}" alt="...">
+						<div class="caption">
+							<h3>{{ car.title }}</h3>
+							<p>{{ car.text }}</p>
+							<p>
+								<a href="#{{car.route}}" class="btn btn-primary" role="button">Read</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		</xmp>
-		</code>
-	</pre>
-	<h2>Usage</h2>
-	<p>Just place thumbnail-repeater tag into view.</p>
-	<pre class="">
-		<code class="">
-		<xmp>
-		< thumbnail-repeater/>
-		</xmp>
-		</code>
-	</pre>
+			</xmp>
+			</code>
+		</pre>
+		<h2>Usage</h2>
+		<p>Just place thumbnail-repeater tag into view.</p>
+		<pre class="">
+			<code class="">
+			<xmp>
+			< thumbnail-repeater/>
+			</xmp>
+			</code>
+		</pre>
+	</div>
 </div>

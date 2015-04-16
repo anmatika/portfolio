@@ -1,60 +1,62 @@
-<div class="blog_grunt_automation">	 
-
-	 <h1>Javascript automation with Grunt</h1>
-
-	<p>With help of grunt you can automatize tasks etc. build</p>
-
-	 <h2>Prequisities</h2>
-	 <p>Load grunt tasks is handy tool for automatically tool loading. When using the tool all the components in node_modules are loaded automatically for grunt.</p>
-	 <div class="well">npm install load-grunt-tasks --save-dev</div>
-
-	 <h2>Gruntfile.js</h2>
-	 <p>The example Gruntfile below. The following tasks included.
-		<ul>
-			<li>Automatic css to sass conversion</li>
-			<li>Wiredep for injecting bower components into index.html</li>
-			<li>Jshint</li>
-		</ul>
-	 </p>
-	 <pre class="">
-		<code class="">
-				
-		module.exports = function(grunt) {
-		  require('load-grunt-tasks')(grunt);
-		  
-		  grunt.initConfig({
-		    
-		    // watch automatically sass changes
-		    compass: {      
-		      dev: { 
-		        options: {
-		          sassDir: 'sass',
-		          cssDir: 'css',
-		          watch: true
-		        }
-		      }
-		    },
-		    // automatically inject bower components into the app
-		    wiredep: {
-		      app: {
-		        src: ['index.html'],
-		        ignorePath:  /\.\.\//
-		      },
-		      sass: {
-		        src: ['sass/{,*/}*.{scss,sass}'],
-		        ignorePath: /(\.\.\/){1,2}bower_components\//
-		      }
-		    },
-		    jshint: {
-		       all: ['Gruntfile.js', 'js/**/*.js']
-		    }
-		  });
-		  grunt.registerTask('default', ['wiredep', 'jshint', 'compass']);
-		};
-		</code>
-	</pre>
-
-	<h2>Usage</h2>
-	 <p>Run the default task</p>
-	 <div class="well">grunt</div>
+<div class="blog_grunt_automation">
+	<div class="box">
+		
+		<h1>Javascript automation with Grunt</h1>
+		
+		<p>With help of grunt you can automatize repetitive tasks etc. building, less to css conversion, dependency loading etc. </p>
+		
+		<h2>Prequisities</h2>
+		<p>Load grunt tasks is handy tool for automatically tool loading. When using the tool all the components in node_modules are loaded automatically for grunt.</p>
+		<div class="well">npm install load-grunt-tasks --save-dev</div>
+		
+		<h2>Gruntfile.js</h2>
+		<p>The example Gruntfile below. The following tasks included.
+			<ul>
+				<li>Automatic css to sass conversion</li>
+				<li>Wiredep for injecting bower components into index.html</li>
+				<li>Jshint</li>
+			</ul>
+		</p>
+		 <pre class="">
+			<code class="">
+			
+			module.exports = function(grunt) {
+			  require('load-grunt-tasks')(grunt);
+			  
+			  grunt.initConfig({
+			    
+			    // watch automatically sass changes
+			    compass: {      
+			      dev: { 
+			        options: {
+			          sassDir: 'sass',
+			          cssDir: 'css',
+			          watch: true
+			        }
+			      }
+			    },
+			    // automatically inject bower components into the app
+			    wiredep: {
+			      app: {
+			        src: ['index.html'],
+			        ignorePath:  /\.\.\//
+			      },
+			      sass: {
+			        src: ['sass/{,*/}*.{scss,sass}'],
+			        ignorePath: /(\.\.\/){1,2}bower_components\//
+			      }
+			    },
+			    jshint: {
+			       all: ['Gruntfile.js', 'js/**/*.js']
+			    }
+			  });
+			  grunt.registerTask('default', ['wiredep', 'jshint', 'compass']);
+			};
+			</code>
+		</pre>
+		
+		<h2>Usage</h2>
+		<p>Run the default task</p>
+		<div class="well">grunt</div>
+	</div>
 </div>

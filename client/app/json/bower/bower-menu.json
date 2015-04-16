@@ -1,8 +1,8 @@
 [
     {
-        "title": "Inject components into app with bower",
-        "text": "Loremipsum",
+        "title": "Basic bower usage",
+        "text": "",
         "image": "",
-        "route": "/blog/bower/inject"
+        "route": "/blog/bower/basic"
     }
 ]

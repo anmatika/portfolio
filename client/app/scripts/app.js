@@ -91,8 +91,8 @@ angular
         templateUrl: 'views/blog_bower.html',
         controller: 'BlogBowerCtrl'
       })
-      .when('/blog/bower/inject', {
-        templateUrl: 'views/blog_bower_inject.html',
+      .when('/blog/bower/basic', {
+        templateUrl: 'views/blog_bower_basic.html',
         controller: 'BlogBowerCtrl'
       })
       .otherwise({
