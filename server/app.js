@@ -16,7 +16,7 @@ app.use(cookieParser());
 
 app.use(flash()); // use connect-flash for flash messages stored in session
 
-i18n.init({ lng: "fi" });
+i18n.init({ lng: "en-US" });
 // i18n.setLng('en-US', function(t) { /* loading done */ });
 
 /**

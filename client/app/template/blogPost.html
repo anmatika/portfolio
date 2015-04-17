@@ -13,7 +13,7 @@
 				<p>{{ p.text }}</p>
 			</div>
 			<p>
-				<div ng-repeat="step in paragraph.steps">
+				<div ng-repeat="step in paragraph.steps" class="steps">
 					<div class="step_title">{{step.title}}</div>
 					<div class="step_text"><p>{{step.text}}</p></div>
 					<div class="well">
@@ -29,6 +29,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="step_posttext"><p>{{step.postText}}</p></div>
 				</div>
 			</p>
 		</div>

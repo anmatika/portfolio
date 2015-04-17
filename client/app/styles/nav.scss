@@ -1,9 +1,5 @@
 .navbar-inverse {
 	background-color: #107BED;
-	
-	a {
-		color: #fff !important;
-	}
 
 	a#logout {
 		cursor: pointer;
@@ -12,5 +8,31 @@
 	#cart_summary {
 		padding-top: 5px;
 		color: #fff;
+	}
+}
+
+.navbar-brand {
+	position: relative;
+	a {
+			color: #fff !important;
+		}
+	#home-icon {
+		position: absolute;
+		left: -10px;
+		top: 6px;
+	}
+}
+
+.navbar-nav {
+	li {
+		a {
+			color: #fff !important;
+		}
+		&:hover {
+			background-color: white;
+			a {
+				color: black !important;
+			}
+		}
 	}
 }

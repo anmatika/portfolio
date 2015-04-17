@@ -7,7 +7,7 @@
     },
     {
         "title": "NodeJS",
-        "text": "Javascript For the server side applications.",
+        "text": "Javascript for the server side applications.",
         "image": "images/nodejs.png",
         "route": "/blog/node"
     },
@@ -19,13 +19,13 @@
     },
     {
         "title": "Bower",
-        "text": "Fetch depedencies for you.",
+        "text": "Fetching the depedencies for you.",
         "image": "images/bower.png",
         "route": "blog/bower"
     },
     {
         "title": "Yeoman",
-        "text": "For scaffolding things.",
+        "text": "For scaffolding web apps.",
         "image": "images/yo.png"
     },
     {

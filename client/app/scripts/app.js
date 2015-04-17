@@ -100,7 +100,7 @@ angular
       });
 
       $translateProvider.translations('en', {
-        aboutMe: 'About me',
+        aboutMe: 'CV',
         blog: 'Blog',
         services: 'Services',
         contact: 'Contact',
@@ -130,7 +130,7 @@ angular
         logout: 'Kirjaudu ulos',
         account: 'Tili'
       });
-      $translateProvider.preferredLanguage('fi');
+      $translateProvider.preferredLanguage('en');
 
        // config ZeroClipboard
       uiZeroclipConfigProvider.setZcConf({

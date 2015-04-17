@@ -1,71 +1,53 @@
 {
-			"paragraphs": [{				
-				"title": "Prequisities",
-				"paragraphs": [
-					{
-						"text": "The following prequisities should be made prior setting up."
-					}
-				],
-				"steps": [{
-					"title": "Create route",
-					"command": "yo angular:route routename"
-				}, {
-					"title": "Install bower",
-					"command": "sudo npm install -g bower"
-				}, {
-					"title": "Install grunt",
-					"command": "sudo npm install -g grunt-cli"
-				}, {
-					"title": "Install Ruby for compass (optional)",
-					"command": "sudo apt-get install ruby"
-				}, {
-					"title": "Install Compass (optional)",
-					"command": "sudo gem install compass"
-				}]
-			}, {
-				"title": "Steps",
-				"paragraphs": [
-					{
-						"text": "Here are the steps."
-					}
-				],
-				"steps": [{
-					"title": "Create root directory",
-					"command": "mkdir myproject"
-				}, {
-					"title": "Create server directory into root folder",
-					"command": "mkdir -p myproject/server"
-				}, {
-					"title": "Create client directory into root folder",
-					"command": "mkdir -p myproject/client"
-				}, {
-					"title": "In client folder scaffold angular by using Yeoman",
-					"command": "yo angular"
-				}, {
-					"title": "Install package.json dependencies",
-					"command": "npm install"
-				}, {
-					"title": "Install bower.json dependencies",
-					"command": "bower install"
-				} ]
+	"paragraphs": [{
+		"title": "Prequisities",
+		"paragraphs": [{
+			"text": "The following prequisities should be made prior setting up."
+		}],
+		"steps": [
+		{
+			"title": "Install the scaffolding tool, Yeoman",
+			"command": "sudo npm install -g yo"
+		}, {
+			"title": "Install bower",
+			"command": "sudo npm install -g bower"
+		}, {
+			"title": "Install grunt",
+			"text": "",
+			"command": "sudo npm install -g grunt-cli"
+		}, {
+			"title": "Install Ruby for compass (optional)",
+			"command": "sudo apt-get install ruby"
+		}, {
+			"title": "Install Compass (optional)",
+			"command": "sudo gem install compass"
+		}]
+	}, {
+		"title": "Steps",
+		"paragraphs": [{
+			"text": "Here are the steps."
+		}],
+		"steps": [{
+			"title": "Create root directory",
+			"command": "mkdir myproject"
+		}, {
+			"title": "Create server directory into root folder",
+			"command": "mkdir -p myproject/server"
+		}, {
+			"title": "Create client directory into root folder",
+			"command": "mkdir -p myproject/client"
+		}, {
+			"title": "In the client folder scaffold angular app by using Yeoman",
+			"text": "",
+			"command": "cd client && yo angular",
+			"postText": "Generator will ask you some questions for you. After that yeoman starts scaffolding the app for you. I takes some time because the components will be downloaded and installed."
 
-			}, {
-				"title": "Usage",
-				"paragraphs": [
-				{
+		}, {
+			"title": "That's it.",
+			"text": "In this point angular app is greated and you can run it by running the following command in the /client directory.",
+			"command": "grunt serve",
+			"postText": "However we won't stop here but will continue making the client and the server side separate."
+		}]
 
-				}],
-				"steps": [{
-					"title": "Start server in the test mode",
-					"command": "cd server && npm test"
-				},
-				{
-					"title": "Automatic SASS to CSS conversion",
-					"command": "cd client && grunt watch"
-				},{
-					"title": "Build to production",
-					"text": "Builds files to server/dist",
-					"command": "cd client && grunt build --force"
-				}]
-			}]
-	}
+	} ]
+}

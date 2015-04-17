@@ -1,7 +1,7 @@
 [
     {
         "title": "Using Express as http server",
-        "text": "Loremipsum",
+        "text": "How to setup node http server with Express",
         "image": "",
         "route": "/blog/node/expresshttp"
     }
