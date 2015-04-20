@@ -1,0 +1,43 @@
+[
+    {
+        "image": {
+        	"href": "images/avanade_logo.jpg",
+        	"alt": ""
+        },
+        "title": "Consultant",
+        "role": "Front-end development",
+        "period": "October 2011 - present",
+        "keywords": ".NET MVC, C#, HTML5, CSS3, Javascript, AngularJS, Entity Framework, SQL, TFS"
+    },
+    {
+        "image": {
+        	"href": "images/digia_logo.png",
+        	"alt": ""
+        },
+        "title": "Systems designer",
+        "role": "Full-stack development",
+        "period": "January 2008 - October 2011",
+        "keywords": ".NET WebForms, .NET WinForms C#, Spring.NET, NHibernate, SQL, Visual Basic 6"
+    },
+    {
+        "image": {
+        	"href": "images/etteplan.png",
+        	"alt": ""
+        },
+        "title": "PCB Designer",
+        "role": "Printed circuit board design",
+        "period": "June 2007 - December 2007",
+        "keywords": "PADS, Powerlogic"
+    },
+    {
+        "image": {
+        	"href": "",
+        	"alt": ""
+        },
+        "company": "Eleforss",
+        "title": "Project Engineer",
+        "role": "Electronics and embedded systems design",
+        "period": "September 2003 - December 2006",
+        "keywords": "Embedded systems, Atmel microcontrollers, C, ASM, PIC, FPGA, PCB design, PADS, Powerlogic"
+    }
+]

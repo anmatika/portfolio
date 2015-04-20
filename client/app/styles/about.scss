@@ -1,6 +1,14 @@
 #aboutme {
 	
+	.jumbotron {
+		-webkit-box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
+		-moz-box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
+		box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
+	}
 
+	#jumbo-aboutme {
+		margin-top: 50px;
+	}
 	#professional_history {
 		margin-top: 100px;
 		ul {

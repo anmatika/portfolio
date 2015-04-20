@@ -6,7 +6,7 @@
 		<img src="images/angular-js.png">
 		</h2>
 		<hr>
-		
+		<p>{{ blogpost.text }}</p>
 		<div ng-repeat="paragraph in blogpost.paragraphs">
 			<h2 class="bold"> {{paragraph.title}} </h2>
 			<div ng-repeat="p in paragraph.paragraphs">

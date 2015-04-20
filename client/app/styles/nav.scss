@@ -12,14 +12,17 @@
 }
 
 .navbar-brand {
+	color: #fff !important;
 	position: relative;
-	a {
-			color: #fff !important;
-		}
+	
 	#home-icon {
 		position: absolute;
 		left: -10px;
 		top: 6px;
+	}
+
+	a:hover {
+		color: #9d9d9d;
 	}
 }
 
