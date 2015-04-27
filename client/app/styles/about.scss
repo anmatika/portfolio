@@ -9,8 +9,12 @@
 	#jumbo-aboutme {
 		margin-top: 50px;
 	}
+
+	#jumbo-trivia {
+		margin-top: 15px;
+	}
 	#professional_history {
-		margin-top: 100px;
+		margin-top: 25px;
 		ul {
 			margin-top: 50px;
 			li {
@@ -19,13 +23,16 @@
 		}
 	}
 
+	#ul_professional_history {
+		padding-left: 0;
+	}
+
 	.jobhistory-info {
 		position:relative;
 	 	// width: 100%;
 	 	ul {
-	 		padding-bottom: 100px;
+	 		padding-bottom: 25px;
  			// padding-right: 100px;
 	 	}
-	 
 	}
 }

@@ -26,12 +26,14 @@
     {
         "title": "Yeoman",
         "text": "For scaffolding web apps.",
-        "image": "images/yo.png"
+        "image": "images/yo.png",
+        "route": "blog/yeoman"
     },
     {
         "title": "Git",
         "text": "The version control.",
-        "image": "images/git.png"
+        "image": "images/git.png",
+        "route": "blog/git"
     }, {
         "title": "Linux",
         "text": "The OS.",

@@ -7,6 +7,17 @@
 		</h2>
 		<hr>
 		
+
+
+		<h2>Intro</h2>
+		
+		<p>In this chapter we go through how to setup node express server for our angular app. We setup it so that it runs in the develop and production mode separately.</p>
+		
+		<p>Following command will launch the server in the development mode. The code in ../client/ folder will be run.</p>
+		<div class="well">npm test</div>
+
+		<p>Following command will launch the server in the production mode. The code in the /dist directory will be run.</p>
+		<div class="well">npm start</div>		
 		<h2>Package.json</h2>
 		
 		Create a following package.json file.
@@ -39,13 +50,13 @@
 			</code>
 		</pre>
 		
-		Run the following command.
+		<p>Run the following command. This will install the tools listed in the above package.json file.</p>
 
 		<div class="well">
 			npm install
 		</div>
 
-		Install nodemon for keeping the server up and running
+		<p>Install nodemon for keeping the server up and running. Nodemon restarts the node server automatically when needed.</p>
 		<div class="well">
 			npm install -g nodemon
 		</div>
@@ -53,7 +64,7 @@
 		<h2>App.js</h2>
 		
 		Create app.js in the root folder with the following contents.
-		The server is configured so that production code is run in /dist folder. And the development code in ../client folder
+		The server is configured so that production code runs in /dist directory. And the development code in ../client directory.
 
 		<pre class="">
 			<code class="">
@@ -142,12 +153,12 @@
 		</pre>
 
 		<h2>Usage</h2>
-		Start the server in the development mode by running
+		Start the server in the development mode by running:
 		<div class="well">
 			npm test
 		</div>
 
-		Start the server in the development mode by running
+		Start the server in the development mode by running:
 		<div class="well">
 			npm start
 		</div>

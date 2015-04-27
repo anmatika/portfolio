@@ -1,3 +1,6 @@
+nav {
+	border-bottom: 5px solid black !important;
+}
 .navbar-inverse {
 	background-color: #107BED;
 
@@ -14,6 +17,7 @@
 .navbar-brand {
 	color: #fff !important;
 	position: relative;
+	margin-right: 30px;
 	
 	#home-icon {
 		position: absolute;
@@ -28,8 +32,10 @@
 
 .navbar-nav {
 	li {
+		margin-right: 15px;
 		a {
 			color: #fff !important;
+			font-family: 'Franchise-Free-Bold';
 		}
 		&:hover {
 			background-color: white;

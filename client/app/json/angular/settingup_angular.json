@@ -1,5 +1,10 @@
 {
-	"text": "In this chapter we go through how to quickly setup angular app by scaffolding it by yeoman.",
+	"title": {
+			"text": "Setting up",
+			"strong": "Angular"
+	},
+	"image": "images/angular.png",
+	"text": "In this chapter we go through how to quickly setup angular app by scaffolding it by yeoman. But we won't stop that but go through how to make separate client and server modes. In the server side you can setup a web server of your own for your app.",
 	"paragraphs": [{
 		"title": "Prequisities",
 		"paragraphs": [{
@@ -11,15 +16,18 @@
 			"command": "sudo npm install -g yo"
 		}, {
 			"title": "Install bower",
+			"text": "The package manager for getting the packages listed in the bower.json for you.",
 			"command": "sudo npm install -g bower"
 		}, {
 			"title": "Install grunt",
-			"text": "",
+			"text": "We use grunt for automation.",
 			"command": "sudo npm install -g grunt-cli"
 		}, {
 			"title": "Install Ruby for compass (optional)",
+			"text": "If you want so use Sass you might want to use Compass. And Compass needs Ruby.",
 			"command": "sudo apt-get install ruby"
 		}, {
+			"text": "For Sass we use Compass. So if you want to use it, hit the following command:",
 			"title": "Install Compass (optional)",
 			"command": "sudo gem install compass"
 		}]
@@ -33,21 +41,24 @@
 			"command": "mkdir myproject"
 		}, {
 			"title": "Create server directory into root folder",
-			"command": "mkdir -p myproject/server"
+			"text": "Even though Angular generator creates standalone angular app in the client directory, purpose of this is make separate client and server sides. Server side is used as backend of our app. And we can use grunt to build production version into server side's dist directory.",
+			"command": "mkdir -p myproject/server/dist"
 		}, {
 			"title": "Create client directory into root folder",
+			"text": "This directory is for the client side development.",
 			"command": "mkdir -p myproject/client"
+
 		}, {
 			"title": "In the client folder scaffold angular app by using Yeoman",
 			"text": "",
 			"command": "cd client && yo angular",
-			"postText": "Generator will ask you some questions for you. After that yeoman starts scaffolding the app for you. I takes some time because the components will be downloaded and installed."
+			"postText": "Generator will ask you some questions. After answering those yeoman starts scaffolding the app for you. I takes some time because the it will download and and install bunch of components."
 
 		}, {
 			"title": "That's it.",
-			"text": "In this point angular app is greated and you can run it by running the following command in the /client directory.",
+			"text": "In this point angular app is created and you can run it by running the following command in the /client directory.",
 			"command": "grunt serve",
-			"postText": "However we won't stop here but will continue making the client and the server side separate. To be continued..."
+			"postText": "However we won't stop here but will continue making the server backend and build system. To be continued..."
 		}]
 
 	} ]

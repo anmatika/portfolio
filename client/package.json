@@ -1,7 +1,9 @@
 {
   "name": "portfolio",
   "version": "0.0.0-3",
-  "dependencies": {},
+  "dependencies": {
+    "hover.css": "^2.0.2"
+  },
   "devDependencies": {
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",

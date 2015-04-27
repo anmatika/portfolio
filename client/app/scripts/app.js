@@ -55,6 +55,10 @@ angular
         templateUrl: 'views/blog.html',
         controller: 'BlogCtrl'
       })
+      .when('/cv', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
@@ -94,6 +98,15 @@ angular
       .when('/blog/bower/basic', {
         templateUrl: 'views/blog_bower_basic.html',
         controller: 'BlogBowerCtrl'
+      })
+      .when('/blog/yeoman', {
+        templateUrl: 'views/under-construction.html'
+      })
+      .when('/blog/linux', {
+        templateUrl: 'views/under-construction.html'
+      })
+      .when('/blog/git', {
+        templateUrl: 'views/under-construction.html'
       })
       .otherwise({
         redirectTo: '/'
