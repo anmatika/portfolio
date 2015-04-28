@@ -1,10 +1,29 @@
 #aboutme {
 	
+	@media (max-width: 1080px) { 
+		#pic-me { display: none; }
+	}
+
+	@media (min-width: 1081px) { 
+		#pic-me {
+			background-image: url('../images/me_orig.jpg');
+			height: 535px;
+			width: auto;
+		}
+
+		#pic-me:hover {
+			background-image: url('../images/me2.jpg');
+		}
+	}
+
 	.jumbotron {
 		-webkit-box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
 		-moz-box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
 		box-shadow: 2px 4px 5px 3px rgba(0,0,0,0.81);
 	}
+
+
+	
 
 	#jumbo-aboutme {
 		margin-top: 50px;
