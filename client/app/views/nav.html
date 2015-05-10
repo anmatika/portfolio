@@ -26,18 +26,10 @@
         <li class="hvr-underline-from-center">
           <a ng-href="#/contact">{{'contact' | translate}}</a>
         </li>
-
-<!--         <li id="signup" ng-show="!username || username.length == 0">
-          <a href="secure/signup">{{'signUp' | translate}}</a>
-        </li>
-        <li id="login" ng-show="!username || username.length == 0">
-          <a ng-href="#/login">Login</a>
-        </li>
- -->
       </ul>      
       <div class="row">
         <div ng-show="username.length > 0">
-          <!-- <a class="pull-right" id="logout" ng-click="logout()">Logout</a> -->
+        
           <a class="pull-right" id="logout" href="/logout">{{'logout' | translate}}</a>
           <span class="pull-right">&nbsp;|&nbsp;</span>
           <div class="pull-right"><a href="/secure/account">{{'account' | translate}}</a></div>

@@ -19,12 +19,13 @@ angular
     'ngTouch',
     'ngCart',
     'pascalprecht.translate',
-    'zeroclipboard'
+    'zeroclipboard',
+    'hljs'
   ])
-  .config(function($routeProvider, $translateProvider, uiZeroclipConfigProvider) {
+  .config(function($routeProvider, $translateProvider, $locationProvider, uiZeroclipConfigProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+       templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .when('/contact', {
@@ -149,4 +150,7 @@ angular
       uiZeroclipConfigProvider.setZcConf({
         swfPath: '../bower_components/zeroclipboard/dist/ZeroClipboard.swf'
       });
+
+      // $locationProvider.html5Mode(true);
+      // $locationProvider.hashPrefix('!');
   });

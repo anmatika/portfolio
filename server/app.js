@@ -7,6 +7,7 @@ var router = express.Router();
 var i18n = require('i18next');
 var flash = require('connect-flash');
 var path = require('path');
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger('dev'));
@@ -30,7 +31,10 @@ if (app.get('env') === 'development') {
     app.use(express.static(path.join(__dirname, '../client/.tmp')));
     app.use(express.static(path.join(__dirname, '../client/app')));
 
-
+    // app.all('/*', function(req, res, next) {
+    //     // Just send the index.html for other files to support HTML5Mode
+    //     res.sendFile('../client/app/index.html', { root: __dirname });
+    // });
     // Error Handling
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
@@ -70,12 +74,13 @@ app.use(express.static(path.join(__dirname, '/bower_components')));
 app.use(express.static(path.join(__dirname, '/scripts')));
 
 
+
 // https_server.listen(PORT);
 
 /**
 * Routes
 */
-require('./routes/main')(router);
-app.use(router);
+// require('./routes/main')(router);
+// app.use(router);
 
 module.exports = app;

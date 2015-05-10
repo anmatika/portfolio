@@ -2,7 +2,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6">
-				<!-- <img src="images/me_orig.jpg" class="hidden-xs" /> -->
 				<div id="pic-me" class="hidden-xs"></div>
 				<div id="jumbo-aboutme" class="jumbotron">
 					<ul class="li_no_style">
@@ -19,7 +18,7 @@
 							<span><h5>Location</h5></span> <span>Helsinki, Finland</span>
 						</li>
 						<li>
-							<span><h5>Education</h5></span> <span>Häme Polytecnic, Bachelor of Engineering IT, 1999-2004</span>
+							<span><h5>Education</h5></span> <span>Häme University of Applied Sciences, Bachelor of Engineering IT, 1999-2004</span>
 						</li>
 						<li>
 							<span><h5>Languages</h5></span> <span>Finnish, English</span>
@@ -63,7 +62,7 @@
 				<ul id="ul_professional_history" class="li_no_style">
 					<li ng-repeat="history in histories">
 						<div class="jumbotron jobhistory-info">
-							<img src="{{ history.image.href }}" alt="{{ history.image.alt }}" />
+							<img class="img-responsive" src="{{ history.image.href }}" alt="{{ history.image.alt }}" />
 							<h3> {{ history.company }} </h3>
 							<ul class="li_no_style">					
 								<li>

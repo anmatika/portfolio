@@ -1,14 +1,14 @@
 <div class="row blogpost box">
 	<div class="col-sm-12 blog_text">
 		<hr>
-		<h2 class="intro-text text-center">
+		<h3 class="intro-text text-center">
 		{{blogpost.title.text}} <strong>{{blogpost.title.strong}}</strong>
 		<img src="{{blogpost.image}}">
-		</h2>
+		</h3>
 		<hr>
 		<p>{{ blogpost.text }}</p>
 		<div ng-repeat="paragraph in blogpost.paragraphs">
-			<h2 class="bold"> {{paragraph.title}} </h2>
+			<h3 class="bold"> {{paragraph.title}} </h3>
 			<div ng-repeat="p in paragraph.paragraphs">
 				<p>{{ p.text }}</p>
 			</div>

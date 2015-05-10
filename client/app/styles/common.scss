@@ -119,9 +119,37 @@ footer {
     border-bottom: 5px solid;
     height: 150px;
     padding-top: 10px;
+    width: 100%;
     a {
         color: white !important;
     }
 }
 
+pre.CICodeFormatter{
+    font-family:arial;
+    font-size:12px;
+    border:1px dashed #CCCCCC;
+    width:99%;
+    height:auto;
+    overflow:auto;
+    background:#f0f0f0;
+    line-height:20px;
+    background-image:URL('../images/codebg.gif');
+    padding:0px;
+    color:#000000;
+    text-align:left;
+    
+    code {
+        color:#000000;
+        word-wrap:normal;
+    }
+}
 
+.prettyprint {
+    color: white;
+}
+
+
+.padding-0 {
+    padding: 0 !important;
+}

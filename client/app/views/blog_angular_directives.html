@@ -2,15 +2,15 @@
 	
 	<div class="box">
 		<hr>
-		<h2 class="intro-text text-center">
+		<h3 class="intro-text text-center">
 		Angular <strong>directives</strong>
 		<img src="images/angular.png">
-		</h2>
+		</h3>
 		<hr>
-		<h2>What is Angular directive</h2>
+		<h3>What is Angular directive</h3>
 		<p>You can extend HTML and make easily own reusable components with them.</p>
 		
-		<h2>Example: Repeat elements directive </h2>
+		<h3>Example: Repeat elements directive </h3>
 		
 		<p>
 			Goal: creating a component for repeating thumbnail elements on the page.
@@ -19,45 +19,42 @@
 			Let's make angular directive called "thumbnailRepeater". Directive gets its template from the file template/thumbnail_repeater.html.
 		</p>
 		
-		<pre class="">
-			<code class="">
+		<div hljs>
 			
-			angular.module('app')
-			  .directive('thumbnailRepeater', function () {
-			    return {
-			      templateUrl: 'template/thumbnail_repeater.html',
-			      restrict: 'E'
-			    };
-			  });
-			</code>
-		</pre>
-		<h2>Template</h2>
-		In the template we go through the model <i>cars</i> and print out the car image, title and text. It will render a button styled link which routes to given route.
-		<pre>
-			<code>
-			<xmp>
-			<div ng-repeat="thumbnail in thumbnails">
-				<div class="col-sm-6 col-md-4">
-					<a style="display: block;" class="a_no_style hover_effect" href="#{{thumbnail.route}}">
-						<div class="thumbnail">
-							<img src="{{ thumbnail.image }}" alt="">
-							<div class="caption">
-								<h4>{{ thumbnail.title }}</h4>
-								<p><i>{{ thumbnail.text }}</i></p>
-							</div>
-						</div>
-					</a>
+	angular.module('app')
+	  .directive('thumbnailRepeater', function () {
+	    return {
+	      templateUrl: 'template/thumbnail_repeater.html',
+	      restrict: 'E'
+	    };
+	  });
+		</div>
+		<h3>Template</h3>
+		In the template we go through the model <i>cars</i> and print out the car image, title and text. 
+		
+		<div hljs>
+			
+	<div ng-repeat="car in cars">
+		<div class="col-sm-6 col-md-4">
+			<a style="display: block;" class="a_no_style hover_effect" href="#{{car.route}}">
+				<div class="car">
+					<img src="{{ car.image }}" alt="">
+					<div class="caption">
+						<h4>{{ car.title }}</h4>
+						<p>{{ car.text }}</p>
+					</div>
 				</div>
-			</div>
-			</xmp>
-			</code>
-		</pre>
-		<h2>Usage</h2>
+			</a>
+		</div>
+	</div>
+			
+		</div>
+		<h3>Usage</h3>
 		<p>Just place the thumbnail-repeater tag into view.</p>
 		<pre class="">
 			<code class="">
 			<xmp>
-			< thumbnail-repeater/>
+	< thumbnail-repeater/>
 			</xmp>
 			</code>
 		</pre>

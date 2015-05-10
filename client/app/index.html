@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="4ntti.matikainen@gmail.com">
         <meta name="viewport" content="width=device-width">
+        <base href="/">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
@@ -16,14 +17,16 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/shop-homepage.css"/>
         <link rel="stylesheet" href="styles/common.css"/>
         <link rel="stylesheet" href="styles/nav.css"/>
         <link rel="stylesheet" href="styles/blog.css"/>
         <link rel="stylesheet" href="styles/about.css"/>
         <!-- endbuild -->
+        
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
         <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/styles/github.min.css">
+        
     </head>
     <body ng-app="portfolioApp">
         <div ng-include="'views/nav.html'"></div>
@@ -70,6 +73,8 @@
         <script src="bower_components/zeroclipboard/dist/ZeroClipboard.js"></script>
         <script src="bower_components/angular-zeroclipboard/src/angular-zeroclipboard.js"></script>
         <!-- endbower -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.3/highlight.min.js"></script>
+        <script src="bower_components/angular-highlightjs/angular-highlightjs.js"></script>
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/angular-locale_fi.js"></script>
@@ -90,6 +95,7 @@
         <script src="scripts/controllers/blog_node.js"></script>
         <script src="scripts/controllers/blog_grunt.js"></script>
         <script src="scripts/controllers/blog_bower.js"></script>
+       
         <!-- endbuild -->
         
         <!-- hides mobile menu when clicked  -->

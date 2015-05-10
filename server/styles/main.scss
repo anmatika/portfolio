@@ -1,5 +1,9 @@
 @import 'variables';
 
+#bq {
+	padding-top: 250px !important;
+}
+
 .navbar-inverse {
 	background-color: $navbarColor;
 }
@@ -13,7 +17,7 @@
 }
 
 body { 
-	padding-top:80px; 
+	padding-top:150px; 
 }
 
 .orderBox {
@@ -23,4 +27,10 @@ body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	border: 2px solid;
+}
+
+#main {
+	img {
+		overflow: hidden;
+	}
 }
