@@ -13,6 +13,7 @@ angular.module('portfolioApp')
 		$timeout(function() {$scope.fadeIn = true}, 0);
 		$timeout(function() {$scope.fadeIn2 = true}, 700);
 		$timeout(function() {$scope.fadeIn3 = true}, 1500);
+		$timeout(function() {$scope.fadeIn4 = true}, 2000);
 		
 	});
 

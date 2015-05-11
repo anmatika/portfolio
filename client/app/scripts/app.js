@@ -65,39 +65,39 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/blog/angular', {
-        templateUrl: 'views/blog_angular.html',
+        templateUrl: 'views/blog/blog_angular.html',
         controller: 'BlogAngularCtrl'
       })
       .when('/blog/angular/settingup', {
-        templateUrl: 'views/blog_angular_settingup.html',
+        templateUrl: 'views/blog/blog_angular_settingup.html',
         controller: 'BlogAngularSettingupCtrl'
       })
       .when('/blog/node', {
-        templateUrl: 'views/blog_node.html',
+        templateUrl: 'views/blog/blog_node.html',
         controller: 'BlogNodeCtrl'
       })
       .when('/blog/node/expresshttp', {
-        templateUrl: 'views/blog_node_expresshttp.html',
+        templateUrl: 'views/blog/blog_node_expresshttp.html',
         controller: 'BlogNodeCtrl'
       })
       .when('/blog/grunt', {
-        templateUrl: 'views/blog_grunt.html',
+        templateUrl: 'views/blog/blog_grunt.html',
         controller: 'BlogGruntCtrl'
       })
       .when('/blog/angular/directives', {
-        templateUrl: 'views/blog_angular_directives.html',
+        templateUrl: 'views/blog/blog_angular_directives.html',
         controller: 'BlogAngularCtrl'
       })
       .when('/blog/grunt/automation', {
-        templateUrl: 'views/blog_grunt_automation.html',
+        templateUrl: 'views/blog/blog_grunt_automation.html',
         controller: 'BlogGruntCtrl'
       })
       .when('/blog/bower', {
-        templateUrl: 'views/blog_bower.html',
+        templateUrl: 'views/blog/blog_bower.html',
         controller: 'BlogBowerCtrl'
       })
       .when('/blog/bower/basic', {
-        templateUrl: 'views/blog_bower_basic.html',
+        templateUrl: 'views/blog/blog_bower_basic.html',
         controller: 'BlogBowerCtrl'
       })
       .when('/blog/yeoman', {

@@ -7,17 +7,43 @@ body {
 	padding-top: 70px;
 }
 
-.clip {
-	// -webkit-mask-image: url(../images/circle.svg)
-	  clip-path: url(#svgPath);
-	 // clip-path: polygon(626px 463px,765px 236px,687px 31px,271px 100px,70px 10px,49px 250px,133px 406px,374px 462px,529px 393px);
-}	
 
 .fade {
-  transition:2s linear all;
+  transition:3s linear all;
   opacity:0;
 }
 
 .fadeIn {
   opacity:1;
 }
+
+#heros {
+	position: relative;
+	#hero-back {
+		position: absolute;
+		left: 0;
+	}
+}
+
+.herobg {
+	background-image: url("../images/hero-back-2.jpg");
+	background-repeat: no-repeat;
+	height: 800px;
+}
+
+.clip3 {  
+  
+  /* deprecated version */
+  position: absolute; /* absolute or fixed positioning required */
+  // clip: rect(110px, 160px, 170px, 60px); /* or "auto" */
+  /* values descript a top/left point and bottom/right point */
+ /* referencing path from an inline SVG <clipPath> */
+  clip-path: url("../images/circle2.svg"); 
+  /* current version (doesn't require positioning) */
+  // clip-path: inset(10px 20px 30px 40px); /* or "none" */
+  /* values are from-top, from-right, from-bottom, from-left */
+
+	/* circle */
+  // clip-path: circle(400px at 400px 400px);
+  // -webkit-clip-path: circle(400px at 400px 400px);
+} 

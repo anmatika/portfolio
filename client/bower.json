@@ -17,6 +17,7 @@
     "angular-translate": "~2.5.2",
     "zeroclipboard": "~2.2.0",
     "angular-zeroclipboard": "~0.4.1",
+    "angular-highlightjs": "latest",
     "octicons": "~2.2.0",
     "Hover": "~2.0.2"
   },
