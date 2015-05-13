@@ -3,6 +3,39 @@
 @font-face { font-family: Headline; src: url('../fonts/HEADOH__.TTF'); } 
 @font-face { font-family: Franchise-Free-Bold; src: url('../fonts/Franchise-Free-Bold.ttf'); } 
 
+@media (min-width: 769px) {
+	#bq {
+		position: absolute;
+		width: 300px;
+		bottom: 150px;
+		left: 0;
+	}
+
+}
+
+@media (max-width: 768px) {
+    h1#title{
+    	font-size: 4em !important;
+    }
+
+	#contact a {
+		font-size: 0.8em;
+	}
+	#bq {
+		position: absolute;
+		width: 100%;
+		bottom: -200px;
+		left: 0;
+	}
+
+}
+
+@media (max-width: 453px) {
+    h1#title{
+    	font-size: 3em !important;
+    }
+}
+
 body {
 	padding-top: 70px;
 }
@@ -30,6 +63,7 @@ body {
 	background-repeat: no-repeat;
 	height: 800px;
 }
+
 
 .clip3 {  
   

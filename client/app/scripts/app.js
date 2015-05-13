@@ -17,7 +17,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngCart',
     'pascalprecht.translate',
     'zeroclipboard',
     'hljs'

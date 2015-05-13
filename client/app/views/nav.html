@@ -41,3 +41,9 @@
   </div>
   <!-- /.container -->
 </nav>
+ <!-- hides mobile menu when clicked  -->
+<script>$('.navbar-collapse a').click(function(){
+
+$('.collapse.in').removeClass('in').css('height', '0');
+window.scrollTo(0, 0);
+});</script>
